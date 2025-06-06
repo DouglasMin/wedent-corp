@@ -182,19 +182,19 @@ const CompanyInformation = () => {
             viewport={{ once: true }}
           >
             <motion.div variants={itemVariants} className="text-center mb-12">
-              <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-white drop-shadow-lg mb-4">
                 {t("businessNeedTitle")}
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              <p className="text-lg text-white/90 max-w-3xl mx-auto mb-8 drop-shadow-sm">
                 {t("businessNeedSubtitle")}
               </p>
-              <p className="text-base text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base text-white/80 max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
                 {t("marketSizeDesc")}
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants} className="mb-12">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-8 text-center">
+              <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg mb-8 text-center">
                 {t("marketChallengesTitle")}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -203,16 +203,16 @@ const CompanyInformation = () => {
                   return (
                     <Card
                       key={index}
-                      className="hover:shadow-lg transition-all duration-300"
+                      className="hover:shadow-xl transition-all duration-300 bg-white/15 backdrop-blur-md border-white/30"
                     >
                       <CardHeader>
-                        <CardTitle className="flex items-center text-gray-800">
-                          <IconComponent className="w-5 h-5 mr-2 text-blue-600" />
+                        <CardTitle className="flex items-center text-white">
+                          <IconComponent className="w-5 h-5 mr-2 text-[#A8DADC]" />
                           {challenge.title}
                         </CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-white/90 leading-relaxed">
                           {challenge.description}
                         </p>
                       </CardContent>
@@ -235,13 +235,13 @@ const CompanyInformation = () => {
             viewport={{ once: true }}
           >
             <motion.div variants={itemVariants} className="text-center mb-12">
-              <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-white drop-shadow-lg mb-4">
                 {t("solutionTitle")}
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              <p className="text-lg text-white/90 max-w-3xl mx-auto mb-8 drop-shadow-sm">
                 {t("solutionSubtitle")}
               </p>
-              <p className="text-base text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base text-white/80 max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
                 {t("solutionDesc")}
               </p>
             </motion.div>
@@ -356,63 +356,59 @@ const CompanyInformation = () => {
 
             <motion.div variants={itemVariants} className="space-y-8">
               {/* Innovative Education */}
-              <Card className="border-l-4 border-l-[#2E86AB]">
+              <Card className="border-l-4 border-l-[#2E86AB] bg-white/15 backdrop-blur-md border-white/30">
                 <CardHeader>
-                  <CardTitle className="text-gray-800 flex items-center">
-                    <BookOpen className="w-5 h-5 mr-2 text-blue-600" />
+                  <CardTitle className="text-white flex items-center">
+                    <BookOpen className="w-5 h-5 mr-2 text-[#A8DADC]" />
                     {t("innovativeEducationTitle")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <p className="text-gray-600">{t("educationFeature1")}</p>
+                    <CheckCircle className="w-5 h-5 text-[#A8DADC] mt-0.5 flex-shrink-0" />
+                    <p className="text-white/90">{t("educationFeature1")}</p>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <p className="text-gray-600">{t("educationFeature2")}</p>
+                    <CheckCircle className="w-5 h-5 text-[#A8DADC] mt-0.5 flex-shrink-0" />
+                    <p className="text-white/90">{t("educationFeature2")}</p>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <p className="text-gray-600">{t("educationFeature3")}</p>
+                    <CheckCircle className="w-5 h-5 text-[#A8DADC] mt-0.5 flex-shrink-0" />
+                    <p className="text-white/90">{t("educationFeature3")}</p>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Product Supply */}
-              <Card className="border-l-4 border-l-[#A8DADC]">
+              <Card className="border-l-4 border-l-[#A8DADC] bg-white/15 backdrop-blur-md border-white/30">
                 <CardHeader>
-                  <CardTitle className="text-[#1D3557] flex items-center">
+                  <CardTitle className="text-white flex items-center">
                     <Factory className="w-5 h-5 mr-2 text-[#A8DADC]" />
                     {t("productSupplyTitle")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <p className="text-[#1D3557]/80">
-                      {t("productSupplyDesc1")}
-                    </p>
+                    <CheckCircle className="w-5 h-5 text-[#A8DADC] mt-0.5 flex-shrink-0" />
+                    <p className="text-white/90">{t("productSupplyDesc1")}</p>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <p className="text-[#1D3557]/80">
-                      {t("productSupplyDesc2")}
-                    </p>
+                    <CheckCircle className="w-5 h-5 text-[#A8DADC] mt-0.5 flex-shrink-0" />
+                    <p className="text-white/90">{t("productSupplyDesc2")}</p>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Manufacturing Expansion */}
-              <Card className="border-l-4 border-l-[#F1FAEE]">
+              <Card className="border-l-4 border-l-[#F1FAEE] bg-white/15 backdrop-blur-md border-white/30">
                 <CardHeader>
-                  <CardTitle className="text-[#1D3557] flex items-center">
-                    <Building2 className="w-5 h-5 mr-2 text-[#457B9D]" />
+                  <CardTitle className="text-white flex items-center">
+                    <Building2 className="w-5 h-5 mr-2 text-[#A8DADC]" />
                     {t("manufacturingExpansionTitle")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#1D3557]/80">
+                  <p className="text-white/90">
                     {t("manufacturingExpansionDesc")}
                   </p>
                 </CardContent>
@@ -432,7 +428,7 @@ const CompanyInformation = () => {
             viewport={{ once: true }}
           >
             <motion.div variants={itemVariants} className="text-center mb-12">
-              <h2 className="text-2xl md:text-4xl font-bold text-[#1D3557] mb-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-white drop-shadow-lg mb-4">
                 {t("differentiatorTitle")}
               </h2>
             </motion.div>
@@ -446,16 +442,16 @@ const CompanyInformation = () => {
                 return (
                   <Card
                     key={index}
-                    className="hover:shadow-lg transition-all duration-300 h-full"
+                    className="hover:shadow-xl transition-all duration-300 h-full bg-white/15 backdrop-blur-md border-white/30"
                   >
                     <CardHeader>
-                      <CardTitle className="flex items-center text-[#1D3557]">
-                        <IconComponent className="w-5 h-5 mr-2 text-[#2E86AB]" />
+                      <CardTitle className="flex items-center text-white">
+                        <IconComponent className="w-5 h-5 mr-2 text-[#A8DADC]" />
                         {diff.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-[#1D3557]/80 leading-relaxed">
+                      <p className="text-white/90 leading-relaxed">
                         {diff.description}
                       </p>
                     </CardContent>
@@ -477,7 +473,7 @@ const CompanyInformation = () => {
             viewport={{ once: true }}
           >
             <motion.div variants={itemVariants} className="text-center mb-12">
-              <h2 className="text-2xl md:text-4xl font-bold text-[#1D3557] mb-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-white drop-shadow-lg mb-4">
                 {t("financialPerformanceTitle")}
               </h2>
             </motion.div>
@@ -486,40 +482,40 @@ const CompanyInformation = () => {
               variants={itemVariants}
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
             >
-              <Card className="border-l-4 border-l-[#2E86AB]">
+              <Card className="border-l-4 border-l-[#2E86AB] bg-white/20 backdrop-blur-md border-white/30">
                 <CardHeader>
-                  <CardTitle className="text-[#1D3557] flex items-center">
-                    <DollarSign className="w-5 h-5 mr-2 text-[#2E86AB]" />
+                  <CardTitle className="text-white flex items-center">
+                    <DollarSign className="w-5 h-5 mr-2 text-[#A8DADC]" />
                     {t("revenueModelTitle")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#1D3557]/80 leading-relaxed">
+                  <p className="text-white/90 leading-relaxed">
                     {t("revenueModelDesc")}
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-[#A8DADC]">
+              <Card className="border-l-4 border-l-[#A8DADC] bg-white/20 backdrop-blur-md border-white/30">
                 <CardHeader>
-                  <CardTitle className="text-[#1D3557] flex items-center">
+                  <CardTitle className="text-white flex items-center">
                     <TrendingUp className="w-5 h-5 mr-2 text-[#A8DADC]" />
                     {t("projectedRevenueTitle")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="p-3 bg-blue-50 rounded-lg">
-                    <p className="text-[#1D3557] font-medium">
+                  <div className="p-3 bg-white/30 backdrop-blur-sm rounded-lg border border-white/20">
+                    <p className="text-white font-medium drop-shadow-sm">
                       {t("year1Revenue")}
                     </p>
                   </div>
-                  <div className="p-3 bg-green-50 rounded-lg">
-                    <p className="text-[#1D3557] font-medium">
+                  <div className="p-3 bg-white/30 backdrop-blur-sm rounded-lg border border-white/20">
+                    <p className="text-white font-medium drop-shadow-sm">
                       {t("year2Revenue")}
                     </p>
                   </div>
-                  <div className="p-3 bg-purple-50 rounded-lg">
-                    <p className="text-[#1D3557] font-medium">
+                  <div className="p-3 bg-white/30 backdrop-blur-sm rounded-lg border border-white/20">
+                    <p className="text-white font-medium drop-shadow-sm">
                       {t("year3Revenue")}
                     </p>
                   </div>
@@ -529,34 +525,34 @@ const CompanyInformation = () => {
 
             {/* Growth Roadmap */}
             <motion.div variants={itemVariants}>
-              <h3 className="text-xl md:text-2xl font-bold text-[#1D3557] mb-8 text-center">
+              <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg mb-8 text-center">
                 {t("growthRoadmapTitle")}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {phases.map((phase, index) => (
                   <Card
                     key={index}
-                    className="relative overflow-hidden hover:shadow-lg transition-all duration-300"
+                    className="relative overflow-hidden hover:shadow-xl transition-all duration-300 bg-white/20 backdrop-blur-md border-white/30"
                   >
                     <div
                       className={`absolute top-0 left-0 w-full h-2 ${phase.color}`}
                     ></div>
                     <CardHeader className="pt-6">
-                      <CardTitle className="text-[#1D3557] flex items-center">
+                      <CardTitle className="text-white flex items-center">
                         <div
-                          className={`w-8 h-8 rounded-full ${phase.color} text-white flex items-center justify-center text-sm font-bold mr-3`}
+                          className={`w-8 h-8 rounded-full ${phase.color} text-white flex items-center justify-center text-sm font-bold mr-3 shadow-lg`}
                         >
                           {phase.phase}
                         </div>
                         <div>
-                          <div className="text-sm text-[#1D3557]/60">
+                          <div className="text-sm text-white/80">
                             {phase.period}
                           </div>
                         </div>
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-[#1D3557]/80 text-sm leading-relaxed">
+                      <p className="text-white/90 text-sm leading-relaxed">
                         {phase.title}
                       </p>
                     </CardContent>

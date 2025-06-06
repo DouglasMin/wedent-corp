@@ -89,10 +89,10 @@ const EducationProgram = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-2xl mb-6">
             {t("educationTitle")}
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto drop-shadow-lg leading-relaxed">
             {t("educationSubtitle")}
           </p>
         </motion.div>
@@ -127,12 +127,12 @@ const EducationProgram = () => {
                   whileHover={{ y: -5 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
-                  <Card className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300 ease-out h-full">
+                  <Card className="bg-white/95 backdrop-blur-md shadow-2xl border-0 hover:shadow-3xl hover:bg-white transition-all duration-500 ease-out h-full">
                     <CardHeader>
-                      <CardTitle className="text-xl md:text-2xl text-blue-600">
+                      <CardTitle className="text-2xl md:text-3xl bg-gradient-to-r from-[#2E86AB] to-[#1D3557] bg-clip-text text-transparent font-bold">
                         {level.title} 프로그램
                       </CardTitle>
-                      <CardDescription className="text-base md:text-lg mt-2">
+                      <CardDescription className="text-lg md:text-xl mt-3 text-gray-700 leading-relaxed">
                         {level.description}
                       </CardDescription>
                     </CardHeader>
@@ -141,13 +141,13 @@ const EducationProgram = () => {
                         <p className="text-sm uppercase text-gray-500 mb-1">
                           {t("programCost")}
                         </p>
-                        <p className="text-4xl md:text-5xl font-bold text-gray-800">
+                        <p className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#2E86AB] to-[#A8DADC] bg-clip-text text-transparent">
                           {level.price}
                         </p>
                       </div>
 
                       <div className="space-y-3">
-                        <p className="font-medium text-gray-800">
+                        <p className="font-bold text-lg text-[#1D3557]">
                           {t("programFeatures")}:
                         </p>
                         {level.features.map((feature) => (
@@ -155,13 +155,15 @@ const EducationProgram = () => {
                             <div className="flex-shrink-0 h-5 w-5 mt-1">
                               <Check className="h-5 w-5 text-primary" />
                             </div>
-                            <p className="ml-3 text-gray-700">{feature.text}</p>
+                            <p className="ml-3 text-gray-800 font-medium">
+                              {feature.text}
+                            </p>
                           </div>
                         ))}
                       </div>
                     </CardContent>
                     <CardFooter>
-                      <Button className="w-full bg-primary hover:bg-primary/90 text-white smooth-transition">
+                      <Button className="w-full bg-gradient-to-r from-[#2E86AB] to-[#1D3557] hover:from-[#1D3557] hover:to-[#2E86AB] text-white font-bold py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300">
                         {t("applyProgram")}
                       </Button>
                     </CardFooter>

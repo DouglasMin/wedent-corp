@@ -293,10 +293,10 @@ const MarketOpportunity: React.FC = () => {
             <BarChart3 className="w-4 h-4 mr-2" />
             {t("marketTitle")}
           </Badge>
-          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-700 to-blue-600 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl mb-8">
             {t("businessNeedTitle")}
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-2xl text-white/90 max-w-5xl mx-auto leading-relaxed drop-shadow-lg">
             {t("businessNeedSubtitle")}
           </p>
         </motion.div>
@@ -379,7 +379,7 @@ const MarketOpportunity: React.FC = () => {
               <AlertTriangle className="w-4 h-4 mr-2" />
               {t("marketChallengesTitle")}
             </Badge>
-            <h3 className="text-2xl md:text-3xl font-bold text-[#1D3557] mb-4">
+            <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-xl mb-6">
               {t("marketChallengesTitle")}
             </h3>
           </motion.div>
@@ -429,10 +429,10 @@ const MarketOpportunity: React.FC = () => {
               <CheckCircle className="w-4 h-4 mr-2" />
               {t("solutionTitle")}
             </Badge>
-            <h3 className="text-2xl md:text-3xl font-bold text-[#1D3557] mb-4">
+            <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-xl mb-6">
               {t("solutionTitle")}
             </h3>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 max-w-4xl mx-auto drop-shadow-lg leading-relaxed">
               {t("solutionDesc")}
             </p>
           </motion.div>
@@ -490,7 +490,7 @@ const MarketOpportunity: React.FC = () => {
               <Award className="w-4 h-4 mr-2" />
               {t("differentiatorTitle")}
             </Badge>
-            <h3 className="text-2xl md:text-3xl font-bold text-[#1D3557] mb-4">
+            <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-xl mb-6">
               {t("differentiatorTitle")}
             </h3>
           </motion.div>
@@ -540,7 +540,7 @@ const MarketOpportunity: React.FC = () => {
               <TrendingUp className="w-4 h-4 mr-2" />
               {t("growthFactorsTitle")}
             </Badge>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+            <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-xl mb-8">
               {t("growthFactorsTitle")}
             </h3>
           </div>

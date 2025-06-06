@@ -18,17 +18,19 @@ const ValueCard = ({ icon, title, description, delay = 0 }: ValueCardProps) => {
       transition={{ duration: 0.8, delay, ease: "easeOut" }}
       viewport={{ once: true, margin: "-100px" }}
       whileHover={{ y: -10, scale: 1.02 }}
-      className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition-all duration-500 ease-out flex flex-col items-center text-center h-full cursor-pointer"
+      className="bg-white/95 backdrop-blur-md shadow-2xl rounded-2xl p-8 hover:shadow-3xl hover:bg-white hover:scale-105 transition-all duration-500 ease-out flex flex-col items-center text-center h-full cursor-pointer border border-white/20"
     >
       <div className="bg-[#2E86AB]/10 rounded-full p-4 mb-4">
         <div className="text-[#2E86AB] w-16 h-16 flex items-center justify-center">
           {icon}
         </div>
       </div>
-      <h3 className="text-xl md:text-2xl font-bold mb-3 text-gray-800">
+      <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#2E86AB] to-[#1D3557] bg-clip-text text-transparent">
         {title}
       </h3>
-      <p className="text-base md:text-lg text-gray-600">{description}</p>
+      <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+        {description}
+      </p>
     </motion.div>
   );
 };
@@ -64,10 +66,10 @@ const ValueProposition = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-2xl mb-6">
             {t("valueTitle")}
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto drop-shadow-lg leading-relaxed">
             {t("valueSubtitle")}
           </p>
         </motion.div>
