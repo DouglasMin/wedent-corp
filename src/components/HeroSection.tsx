@@ -31,13 +31,13 @@ const HeroSection = ({
   };
   return (
     <section className="relative min-h-screen w-full bg-background flex items-center justify-center">
-      {/* Background Image with Gradient Overlay */}
-      <div className="absolute inset-0 z-0">
+      {/* Fixed Background Image with Gradient Overlay */}
+      <div className="fixed inset-0 z-0">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/80 to-dark/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60" />
       </div>
 
       {/* Content Container */}
@@ -50,7 +50,7 @@ const HeroSection = ({
         >
           {/* Headline */}
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+            className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}

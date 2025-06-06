@@ -80,7 +80,7 @@ const EducationProgram = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white" id="education-program">
+    <section className="py-16 md:py-24 bg-transparent" id="education-program">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           className="text-center mb-12"
@@ -89,7 +89,7 @@ const EducationProgram = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-dark mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
             {t("educationTitle")}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -129,7 +129,7 @@ const EducationProgram = () => {
                 >
                   <Card className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300 ease-out h-full">
                     <CardHeader>
-                      <CardTitle className="text-xl md:text-2xl text-primary">
+                      <CardTitle className="text-xl md:text-2xl text-blue-600">
                         {level.title} 프로그램
                       </CardTitle>
                       <CardDescription className="text-base md:text-lg mt-2">
@@ -141,13 +141,13 @@ const EducationProgram = () => {
                         <p className="text-sm uppercase text-gray-500 mb-1">
                           {t("programCost")}
                         </p>
-                        <p className="text-4xl md:text-5xl font-bold text-dark">
+                        <p className="text-4xl md:text-5xl font-bold text-gray-800">
                           {level.price}
                         </p>
                       </div>
 
                       <div className="space-y-3">
-                        <p className="font-medium text-dark">
+                        <p className="font-medium text-gray-800">
                           {t("programFeatures")}:
                         </p>
                         {level.features.map((feature) => (

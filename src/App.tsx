@@ -7,14 +7,16 @@ import routes from "tempo-routes";
 function App() {
   return (
     <LanguageProvider>
-      <Suspense fallback={<p>Loading...</p>}>
-        <>
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-          {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
-        </>
-      </Suspense>
+      <div className="relative min-h-screen">
+        <Suspense fallback={<p>Loading...</p>}>
+          <>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+            {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
+          </>
+        </Suspense>
+      </div>
     </LanguageProvider>
   );
 }

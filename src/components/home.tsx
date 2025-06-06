@@ -39,7 +39,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="bg-[#F1FAEE] min-h-screen smooth-scroll">
+    <div className="min-h-screen smooth-scroll">
       {/* Language Toggle */}
       <LanguageToggle />
 
@@ -47,33 +47,44 @@ const HomePage = () => {
       <HeroSection />
 
       {/* Value Proposition Section */}
-      <section id="value-proposition" className="py-16 md:py-24 bg-white">
+      <section
+        id="value-proposition"
+        className="relative z-10 py-16 md:py-24 bg-transparent"
+      >
         <div className="max-w-6xl mx-auto px-4">
           <ValueProposition />
         </div>
       </section>
 
       {/* Market Opportunity Section */}
-      <section id="market-opportunity" className="py-16 md:py-24 bg-gray-50">
+      <section
+        id="market-opportunity"
+        className="relative z-10 py-16 md:py-24 bg-transparent"
+      >
         <div className="max-w-6xl mx-auto px-4">
           <MarketOpportunity />
         </div>
       </section>
 
       {/* Education Program Section */}
-      <section id="education-program" className="py-16 md:py-24 bg-white">
+      <section
+        id="education-program"
+        className="relative z-10 py-16 md:py-24 bg-transparent"
+      >
         <div className="max-w-6xl mx-auto px-4">
           <EducationProgram />
         </div>
       </section>
 
       {/* Company Information Section */}
-      <CompanyInformation />
+      <div className="relative z-10">
+        <CompanyInformation />
+      </div>
 
       {/* Call-to-Action Section */}
       <section
         id="contact"
-        className="py-16 md:py-24 bg-gradient-to-r from-[#2E86AB] to-[#A8DADC]"
+        className="relative z-10 py-16 md:py-24 bg-gradient-to-r from-[#2E86AB] to-[#A8DADC]"
       >
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
@@ -112,7 +123,7 @@ const HomePage = () => {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-[#1D3557] mb-1"
+                    className="block text-sm font-medium text-gray-700 mb-1"
                   >
                     {t("nameLabel")}
                   </label>
@@ -125,7 +136,7 @@ const HomePage = () => {
                 <div>
                   <label
                     htmlFor="company"
-                    className="block text-sm font-medium text-[#1D3557] mb-1"
+                    className="block text-sm font-medium text-gray-700 mb-1"
                   >
                     {t("companyLabel")}
                   </label>
@@ -138,7 +149,7 @@ const HomePage = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-[#1D3557] mb-1"
+                    className="block text-sm font-medium text-gray-700 mb-1"
                   >
                     {t("emailLabel")}
                   </label>
@@ -152,7 +163,7 @@ const HomePage = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-[#1D3557] mb-1"
+                    className="block text-sm font-medium text-gray-700 mb-1"
                   >
                     {t("messageLabel")}
                   </label>
@@ -175,7 +186,7 @@ const HomePage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-[#1D3557] text-white">
+      <footer className="relative z-10 py-8 bg-[#1D3557] text-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>

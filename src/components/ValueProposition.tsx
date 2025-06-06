@@ -25,10 +25,10 @@ const ValueCard = ({ icon, title, description, delay = 0 }: ValueCardProps) => {
           {icon}
         </div>
       </div>
-      <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#1D3557]">
+      <h3 className="text-xl md:text-2xl font-bold mb-3 text-gray-800">
         {title}
       </h3>
-      <p className="text-base md:text-lg text-[#1D3557]/80">{description}</p>
+      <p className="text-base md:text-lg text-gray-600">{description}</p>
     </motion.div>
   );
 };
@@ -55,7 +55,7 @@ const ValueProposition = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#F1FAEE]" id="value-proposition">
+    <section className="py-16 md:py-24 bg-transparent" id="value-proposition">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -64,10 +64,10 @@ const ValueProposition = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-[#1D3557] mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
             {t("valueTitle")}
           </h2>
-          <p className="text-lg md:text-xl text-[#1D3557]/70 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             {t("valueSubtitle")}
           </p>
         </motion.div>

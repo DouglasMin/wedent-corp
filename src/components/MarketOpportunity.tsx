@@ -279,7 +279,7 @@ const MarketOpportunity: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-white" id="market-opportunity">
+    <section className="py-16 bg-transparent" id="market-opportunity">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -293,7 +293,7 @@ const MarketOpportunity: React.FC = () => {
             <BarChart3 className="w-4 h-4 mr-2" />
             {t("marketTitle")}
           </Badge>
-          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-[#1D3557] to-[#2E86AB] bg-clip-text text-transparent mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-700 to-blue-600 bg-clip-text text-transparent mb-6">
             {t("businessNeedTitle")}
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -346,7 +346,7 @@ const MarketOpportunity: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-[#1D3557] to-[#2E86AB] rounded-3xl p-8 md:p-12 text-white mb-20"
+          className="bg-gradient-to-r from-[#1D3557]/80 to-[#2E86AB]/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 text-white mb-20"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
@@ -400,7 +400,7 @@ const MarketOpportunity: React.FC = () => {
                       >
                         <IconComponent className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-[#1D3557] text-lg">
+                      <CardTitle className="text-gray-800 text-lg">
                         {challenge.title}
                       </CardTitle>
                     </CardHeader>
@@ -453,7 +453,7 @@ const MarketOpportunity: React.FC = () => {
                       >
                         <IconComponent className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-[#1D3557] text-lg">
+                      <CardTitle className="text-gray-800 text-lg">
                         {solution.title}
                       </CardTitle>
                     </CardHeader>
@@ -510,7 +510,7 @@ const MarketOpportunity: React.FC = () => {
                         <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center">
                           <IconComponent className="w-6 h-6 text-white" />
                         </div>
-                        <CardTitle className="text-[#1D3557] text-lg">
+                        <CardTitle className="text-gray-800 text-lg">
                           {diff.title}
                         </CardTitle>
                       </div>
@@ -533,14 +533,14 @@ const MarketOpportunity: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-8 md:p-12"
+          className="bg-gradient-to-br from-gray-50/80 to-blue-50/80 backdrop-blur-sm rounded-3xl p-8 md:p-12"
         >
           <div className="text-center mb-8">
             <Badge className="bg-blue-50 text-blue-600 border-blue-200 mb-4">
               <TrendingUp className="w-4 h-4 mr-2" />
               {t("growthFactorsTitle")}
             </Badge>
-            <h3 className="text-2xl md:text-3xl font-bold text-[#1D3557] mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
               {t("growthFactorsTitle")}
             </h3>
           </div>

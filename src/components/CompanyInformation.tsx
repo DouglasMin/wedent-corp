@@ -115,9 +115,9 @@ const CompanyInformation = () => {
   ];
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-transparent min-h-screen">
       {/* Company Overview Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-[#1D3557] to-[#2E86AB]">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[#1D3557]/80 to-[#2E86AB]/80 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             variants={containerVariants}
@@ -173,7 +173,7 @@ const CompanyInformation = () => {
       </section>
 
       {/* Business Need Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-transparent">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             variants={containerVariants}
@@ -182,19 +182,19 @@ const CompanyInformation = () => {
             viewport={{ once: true }}
           >
             <motion.div variants={itemVariants} className="text-center mb-12">
-              <h2 className="text-2xl md:text-4xl font-bold text-[#1D3557] mb-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
                 {t("businessNeedTitle")}
               </h2>
-              <p className="text-lg text-[#1D3557]/80 max-w-3xl mx-auto mb-8">
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
                 {t("businessNeedSubtitle")}
               </p>
-              <p className="text-base text-[#1D3557]/70 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 {t("marketSizeDesc")}
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants} className="mb-12">
-              <h3 className="text-xl md:text-2xl font-bold text-[#1D3557] mb-8 text-center">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-8 text-center">
                 {t("marketChallengesTitle")}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -206,13 +206,13 @@ const CompanyInformation = () => {
                       className="hover:shadow-lg transition-all duration-300"
                     >
                       <CardHeader>
-                        <CardTitle className="flex items-center text-[#1D3557]">
-                          <IconComponent className="w-5 h-5 mr-2 text-[#2E86AB]" />
+                        <CardTitle className="flex items-center text-gray-800">
+                          <IconComponent className="w-5 h-5 mr-2 text-blue-600" />
                           {challenge.title}
                         </CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-[#1D3557]/80 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed">
                           {challenge.description}
                         </p>
                       </CardContent>
@@ -226,7 +226,7 @@ const CompanyInformation = () => {
       </section>
 
       {/* Solution Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-transparent">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             variants={containerVariants}
@@ -235,20 +235,20 @@ const CompanyInformation = () => {
             viewport={{ once: true }}
           >
             <motion.div variants={itemVariants} className="text-center mb-12">
-              <h2 className="text-2xl md:text-4xl font-bold text-[#1D3557] mb-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
                 {t("solutionTitle")}
               </h2>
-              <p className="text-lg text-[#1D3557]/80 max-w-3xl mx-auto mb-8">
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
                 {t("solutionSubtitle")}
               </p>
-              <p className="text-base text-[#1D3557]/70 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 {t("solutionDesc")}
               </p>
             </motion.div>
 
             {/* Visual Process Flow */}
             <motion.div variants={itemVariants} className="mb-12">
-              <div className="bg-gradient-to-r from-[#1D3557]/5 to-[#2E86AB]/5 rounded-2xl p-8">
+              <div className="bg-gradient-to-r from-[#1D3557]/10 to-[#2E86AB]/10 backdrop-blur-sm rounded-2xl p-8">
                 <h3 className="text-xl md:text-2xl font-bold text-[#1D3557] mb-8 text-center">
                   통합 플랫폼 프로세스
                 </h3>
@@ -265,10 +265,10 @@ const CompanyInformation = () => {
                         1
                       </div>
                     </div>
-                    <h4 className="text-lg font-bold text-[#1D3557] mt-4 mb-2">
+                    <h4 className="text-lg font-bold text-gray-800 mt-4 mb-2">
                       교육
                     </h4>
-                    <p className="text-sm text-[#1D3557]/70 text-center max-w-32">
+                    <p className="text-sm text-gray-600 text-center max-w-32">
                       실전 중심 임플란트 교육
                     </p>
                   </div>
@@ -291,10 +291,10 @@ const CompanyInformation = () => {
                         2
                       </div>
                     </div>
-                    <h4 className="text-lg font-bold text-[#1D3557] mt-4 mb-2">
+                    <h4 className="text-lg font-bold text-gray-800 mt-4 mb-2">
                       실습
                     </h4>
-                    <p className="text-sm text-[#1D3557]/70 text-center max-w-32">
+                    <p className="text-sm text-gray-600 text-center max-w-32">
                       실제 임상 케이스 적용
                     </p>
                   </div>
@@ -317,10 +317,10 @@ const CompanyInformation = () => {
                         3
                       </div>
                     </div>
-                    <h4 className="text-lg font-bold text-[#1D3557] mt-4 mb-2">
+                    <h4 className="text-lg font-bold text-gray-800 mt-4 mb-2">
                       제품 공급
                     </h4>
-                    <p className="text-sm text-[#1D3557]/70 text-center max-w-32">
+                    <p className="text-sm text-gray-600 text-center max-w-32">
                       임플란트 키트 및 제품 공급
                     </p>
                   </div>
@@ -343,10 +343,10 @@ const CompanyInformation = () => {
                         4
                       </div>
                     </div>
-                    <h4 className="text-lg font-bold text-[#1D3557] mt-4 mb-2">
+                    <h4 className="text-lg font-bold text-gray-800 mt-4 mb-2">
                       A/S
                     </h4>
-                    <p className="text-sm text-[#1D3557]/70 text-center max-w-32">
+                    <p className="text-sm text-gray-600 text-center max-w-32">
                       지속적인 지원 및 서비스
                     </p>
                   </div>
@@ -358,29 +358,23 @@ const CompanyInformation = () => {
               {/* Innovative Education */}
               <Card className="border-l-4 border-l-[#2E86AB]">
                 <CardHeader>
-                  <CardTitle className="text-[#1D3557] flex items-center">
-                    <BookOpen className="w-5 h-5 mr-2 text-[#2E86AB]" />
+                  <CardTitle className="text-gray-800 flex items-center">
+                    <BookOpen className="w-5 h-5 mr-2 text-blue-600" />
                     {t("innovativeEducationTitle")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <p className="text-[#1D3557]/80">
-                      {t("educationFeature1")}
-                    </p>
+                    <p className="text-gray-600">{t("educationFeature1")}</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <p className="text-[#1D3557]/80">
-                      {t("educationFeature2")}
-                    </p>
+                    <p className="text-gray-600">{t("educationFeature2")}</p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <p className="text-[#1D3557]/80">
-                      {t("educationFeature3")}
-                    </p>
+                    <p className="text-gray-600">{t("educationFeature3")}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -429,7 +423,7 @@ const CompanyInformation = () => {
       </section>
 
       {/* Differentiators Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-transparent">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             variants={containerVariants}
@@ -474,7 +468,7 @@ const CompanyInformation = () => {
       </section>
 
       {/* Financial Performance Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-transparent">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             variants={containerVariants}
@@ -575,7 +569,7 @@ const CompanyInformation = () => {
       </section>
 
       {/* Partnership Invitation Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-[#2E86AB] to-[#A8DADC]">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-[#2E86AB]/80 to-[#A8DADC]/80 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             variants={containerVariants}
