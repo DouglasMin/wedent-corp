@@ -75,7 +75,7 @@ const EducationProgram = () => {
         { id: 6, text: t("advancedFeature6") },
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1609840112990-4265448268d1?w=800&q=80",
+        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80",
     },
   ];
 

@@ -47,21 +47,21 @@ const HomePage = () => {
       <HeroSection />
 
       {/* Value Proposition Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section id="value-proposition" className="py-16 md:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <ValueProposition />
         </div>
       </section>
 
       {/* Market Opportunity Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section id="market-opportunity" className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <MarketOpportunity />
         </div>
       </section>
 
       {/* Education Program Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section id="education-program" className="py-16 md:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <EducationProgram />
         </div>
@@ -71,7 +71,10 @@ const HomePage = () => {
       <CompanyInformation />
 
       {/* Call-to-Action Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-[#2E86AB] to-[#A8DADC]">
+      <section
+        id="contact"
+        className="py-16 md:py-24 bg-gradient-to-r from-[#2E86AB] to-[#A8DADC]"
+      >
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             variants={containerVariants}

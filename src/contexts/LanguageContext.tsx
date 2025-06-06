@@ -17,6 +17,9 @@ const translations = {
     // Hero Section
     heroHeadline: "필리핀 치과 임플란트 시장의 혁신을 이끌다",
     heroSubheadline: "한국 선진 기술 × 실전 중심 교육 × 통합 플랫폼",
+    koreanTech: "한국 선진 기술",
+    practicalEducation: "실전 중심 교육",
+    integratedPlatform: "통합 플랫폼",
     primaryCTA: "파트너십 문의",
     secondaryCTA: "교육 프로그램 보기",
 
@@ -214,6 +217,9 @@ const translations = {
     heroHeadline: "Leading Innovation in Philippine Dental Implant Market",
     heroSubheadline:
       "Korean Advanced Technology × Practical Education × Integrated Platform",
+    koreanTech: "Korean Advanced Technology",
+    practicalEducation: "Practical Education",
+    integratedPlatform: "Integrated Platform",
     primaryCTA: "Partnership Inquiry",
     secondaryCTA: "View Education Program",
 
@@ -416,9 +422,7 @@ const translations = {
   },
 };
 
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
+const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>("ko");
 
   const t = (key: string): string => {
@@ -432,10 +436,12 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   );
 };
 
-export function useLanguage() {
+const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (context === undefined) {
     throw new Error("useLanguage must be used within a LanguageProvider");
   }
   return context;
-}
+};
+
+export { LanguageProvider, useLanguage };
