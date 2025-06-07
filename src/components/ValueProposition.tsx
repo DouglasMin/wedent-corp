@@ -57,7 +57,10 @@ const ValueProposition = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-transparent" id="value-proposition">
+    <section
+      className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50"
+      id="value-proposition"
+    >
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -66,10 +69,10 @@ const ValueProposition = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-2xl mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
             {t("valueTitle")}
           </h2>
-          <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto drop-shadow-lg leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
             {t("valueSubtitle")}
           </p>
         </motion.div>

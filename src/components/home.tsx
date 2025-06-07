@@ -1,15 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import HeroSection from "./HeroSection";
-import ValueProposition from "./ValueProposition";
-import MarketOpportunity from "./MarketOpportunity";
-import EducationProgram from "./EducationProgram";
-import CompanyInformation from "./CompanyInformation";
-import LanguageToggle from "./LanguageToggle";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useLanguage } from "../contexts/LanguageContext";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Building2,
+  BarChart3,
+  GraduationCap,
+  Phone,
+} from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 const HomePage = () => {
   const { t } = useLanguage();
@@ -38,48 +42,101 @@ const HomePage = () => {
     },
   };
 
+  const quickLinks = [
+    {
+      title: "회사소개",
+      description: "WeDent Corp.의 비전과 미션을 확인하세요",
+      path: "/aboutus",
+      icon: Building2,
+      color: "from-blue-500 to-blue-600",
+    },
+    {
+      title: "시장분석",
+      description: "필리핀 치과 임플란트 시장의 기회를 살펴보세요",
+      path: "/market",
+      icon: BarChart3,
+      color: "from-green-500 to-green-600",
+    },
+    {
+      title: "교육프로그램",
+      description: "실전 중심의 차별화된 교육 프로그램을 확인하세요",
+      path: "/education",
+      icon: GraduationCap,
+      color: "from-purple-500 to-purple-600",
+    },
+    {
+      title: "연락처",
+      description: "파트너십 및 투자 문의를 위해 연락하세요",
+      path: "/contact",
+      icon: Phone,
+      color: "from-orange-500 to-orange-600",
+    },
+  ];
+
   return (
     <div className="min-h-screen smooth-scroll">
-      {/* Language Toggle */}
-      <LanguageToggle />
-
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Value Proposition Section */}
-      <section
-        id="value-proposition"
-        className="relative z-10 py-16 md:py-24 bg-transparent"
-      >
+      {/* Quick Navigation Section */}
+      <section className="relative z-10 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4">
-          <ValueProposition />
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <motion.div variants={itemVariants}>
+              <h2 className="text-3xl md:text-5xl font-bold text-[#1D3557] drop-shadow-lg mb-6">
+                WeDent Corp. 둘러보기
+              </h2>
+              <p className="text-xl text-gray-800 drop-shadow-md max-w-3xl mx-auto">
+                필리핀 치과 임플란트 시장의 혁신을 이끄는 WeDent Corp.에 대해
+                자세히 알아보세요
+              </p>
+            </motion.div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {quickLinks.map((link, index) => {
+              const IconComponent = link.icon;
+              return (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="group"
+                >
+                  <Link to={link.path}>
+                    <Card className="h-full hover:shadow-xl transition-all duration-300 group-hover:scale-105 cursor-pointer">
+                      <CardHeader className="text-center">
+                        <div
+                          className={`w-16 h-16 mx-auto bg-gradient-to-r ${link.color} rounded-full flex items-center justify-center mb-4`}
+                        >
+                          <IconComponent className="w-8 h-8 text-white" />
+                        </div>
+                        <CardTitle className="text-lg group-hover:text-[#2E86AB] transition-colors">
+                          {link.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                          {link.description}
+                        </p>
+                        <div className="flex items-center justify-center text-[#2E86AB] font-medium text-sm group-hover:translate-x-1 transition-transform">
+                          자세히 보기
+                          <ArrowRight className="w-4 h-4 ml-1" />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
-
-      {/* Market Opportunity Section */}
-      <section
-        id="market-opportunity"
-        className="relative z-10 py-16 md:py-24 bg-transparent"
-      >
-        <div className="max-w-6xl mx-auto px-4">
-          <MarketOpportunity />
-        </div>
-      </section>
-
-      {/* Education Program Section */}
-      <section
-        id="education-program"
-        className="relative z-10 py-16 md:py-24 bg-transparent"
-      >
-        <div className="max-w-6xl mx-auto px-4">
-          <EducationProgram />
-        </div>
-      </section>
-
-      {/* Company Information Section */}
-      <div className="relative z-10">
-        <CompanyInformation />
-      </div>
 
       {/* Call-to-Action Section */}
       <section
@@ -197,34 +254,34 @@ const HomePage = () => {
               <h3 className="text-xl font-bold mb-4">{t("contactTitle")}</h3>
               <p className="text-sm text-white/80">조은주 대표</p>
               <p className="text-sm text-white/80">010-3883-2195</p>
-              <p className="text-sm text-white/80">info@wedent.co.kr</p>
+              <p className="text-sm text-white/80">salvus02@naver.com</p>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4">{t("quickLinksTitle")}</h3>
               <ul className="space-y-2">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/education"
                     className="text-sm text-white/80 hover:text-white smooth-transition"
                   >
                     {t("educationProgramLink")}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/contact"
                     className="text-sm text-white/80 hover:text-white smooth-transition"
                   >
                     {t("partnershipLink")}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/aboutus"
                     className="text-sm text-white/80 hover:text-white smooth-transition"
                   >
                     {t("aboutLink")}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

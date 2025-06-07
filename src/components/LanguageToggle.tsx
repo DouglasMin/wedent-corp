@@ -7,7 +7,7 @@ const LanguageToggle = () => {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="fixed top-4 right-4 z-50 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-2 smooth-transition hover:bg-white">
+    <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-2 smooth-transition hover:bg-white">
       <div className="flex items-center gap-2">
         <Globe className="h-4 w-4 text-[#2E86AB]" />
         <div className="flex items-center bg-gray-100 rounded-md p-1">
